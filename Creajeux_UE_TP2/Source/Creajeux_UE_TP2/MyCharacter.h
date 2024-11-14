@@ -15,7 +15,14 @@ public:
 	// Sets default values for this character's properties
 	AMyCharacter();
 	UFUNCTION(BlueprintCallable)
-	void testfunc();
+	void interact();
+	UFUNCTION(BlueprintCallable)
+	void Scroll();
+	UFUNCTION(BlueprintCallable)
+	void Grab();
+	UFUNCTION(BlueprintCallable)
+	void Release();
+
 
 protected:
 	// Called when the game starts or when spawned

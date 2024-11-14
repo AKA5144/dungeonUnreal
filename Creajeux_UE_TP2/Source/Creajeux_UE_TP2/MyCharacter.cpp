@@ -35,8 +35,19 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 }
 
-void AMyCharacter::testfunc()
+void AMyCharacter::interact()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Coucou"));
+	UE_LOG(LogTemp, Warning, TEXT("Function called: %s"), TEXT(__FUNCTION__));
 }
-
+void AMyCharacter::Scroll()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Function called: %s"), TEXT(__FUNCTION__));
+}
+void AMyCharacter::Grab()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Function called: %s"), TEXT(__FUNCTION__));
+}
+void AMyCharacter::Release()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Function called: %s"), TEXT(__FUNCTION__));
+}
