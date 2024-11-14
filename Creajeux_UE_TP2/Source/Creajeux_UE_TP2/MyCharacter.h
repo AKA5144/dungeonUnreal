@@ -17,7 +17,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void interact();
 	UFUNCTION(BlueprintCallable)
-	void Scroll();
+	void Scroll(float Direction);
 	UFUNCTION(BlueprintCallable)
 	void Grab();
 	UFUNCTION(BlueprintCallable)

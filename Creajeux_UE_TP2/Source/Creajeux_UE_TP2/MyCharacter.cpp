@@ -11,7 +11,6 @@ AMyCharacter::AMyCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 	CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComponent"));
 	CameraComponent->SetupAttachment(GetMesh());
-	CameraComponent->bUsePawnControlRotation = true;
 }
 
 // Called when the game starts or when spawned
@@ -39,9 +38,9 @@ void AMyCharacter::interact()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Function called: %s"), TEXT(__FUNCTION__));
 }
-void AMyCharacter::Scroll()
+void AMyCharacter::Scroll(float Direction)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Function called: %s"), TEXT(__FUNCTION__));
+	UE_LOG(LogTemp, Warning, TEXT("Direction Value: %f"), Direction);
 }
 void AMyCharacter::Grab()
 {
