@@ -2,13 +2,16 @@
 
 
 #include "MyCharacter.h"
+#include "Camera/CameraComponent.h" 
 
 // Sets default values
 AMyCharacter::AMyCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComponent"));
+	CameraComponent->SetupAttachment(GetMesh());
+	CameraComponent->bUsePawnControlRotation = true;
 }
 
 // Called when the game starts or when spawned
@@ -35,6 +38,5 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 void AMyCharacter::testfunc()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Coucou"));
-
 }
 
